@@ -1,14 +1,81 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korean Vocabulary App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+    <header>
+        <h1 data-i18n="appTitle">Korean Vocabulary App</h1>
+        <div class="settings-container">
+            <select id="language-selector"></select>
+        </div>
+    </header>
+
+    <nav id="tab-nav">
+        <button class="tab-link active" data-tab="flashcards" data-i18n="tabFlashcards">Flashcards</button>
+        <button class="tab-link" data-tab="quiz" data-i18n="tabQuiz">Quiz</button>
+        <button class="tab-link" data-tab="vocabulary" data-i18n="tabVocabulary">Vocabulary</button>
+    </nav>
+
+    <main id="app-container">
+        <!-- Flashcards Section -->
+        <section id="flashcards" class="tab-content active">
+            <div id="flashcard-container"></div>
+            <div class="flashcard-nav">
+                <button id="prev-word" data-i18n="prevButton">Prev</button>
+                <button id="next-word" data-i18n="nextButton">Next</button>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz" class="tab-content">
+            <div id="quiz-container"></div>
+            <button id="start-quiz" data-i18n="startQuizButton">Start Quiz</button>
+						<button id="review-wrong-answers" data-i18n="reviewWrongAnswers" style="display: none;"></button>
+        </section>
+
+        <!-- Vocabulary List Section -->
+        <section id="vocabulary" class="tab-content">
+            <div class="filters">
+                <input type="text" id="search-bar" placeholder="Search..." data-i18n-placeholder="searchPlaceholder">
+                <select id="category-filter">
+                    <option value="all" data-i18n="allCategories">All Categories</option>
+                </select>
+                <button id="favorites-filter" data-i18n="showFavorites">Show Favorites</button>
+            </div>
+            <div id="vocabulary-list"></div>
+        </section>
+    </main>
+
+    <template id="flashcard-template">
+        <div class="flashcard">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <div class="word-info">
+                        <h2 class="korean-word"></h2>
+                        <p class="romanization"></p>
+                    </div>
+                    <div class="card-actions">
+                        <button class="pronounce-btn" title="Pronounce">🔊</button>
+                        <button class="favorite-btn" title="Favorite">☆</button>
+                    </div>
+                    <p class="example-sentence-korean"></p>
+                </div>
+                <div class="flashcard-back">
+                    <h3 class="meaning"></h3>
+                    <p class="example-sentence-translation"></p>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <script src="app.js"></script>
 </body>
 </html>
