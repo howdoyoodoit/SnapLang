@@ -38,6 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
             allCategories: 'All Categories',
             showFavorites: 'Show Favorites',
             quizScore: (score, total) => `Quiz Complete! Your score: ${score}/${total}`,
+            howToUseTitle: 'How to Use',
+            howToUseStep1: 'Flashcards: Click the card to flip. Use Prev/Next to navigate.',
+            howToUseStep2: 'Quiz: Test your knowledge. Review missed words at the end.',
+            howToUseStep3: 'Vocabulary: Search and filter words by category or favorites.',
         },
         ko: {
             appTitle: '한국어 단어 학습 앱',
@@ -52,6 +56,10 @@ document.addEventListener('DOMContentLoaded', () => {
             allCategories: '모든 카테고리',
             showFavorites: '즐겨찾기 보기',
             quizScore: (score, total) => `퀴즈 완료! 점수: ${score}/${total}`,
+            howToUseTitle: '사용 방법',
+            howToUseStep1: '플래시카드: 카드를 클릭하면 뜻이 보입니다. 이전/다음 버튼으로 이동하세요.',
+            howToUseStep2: '퀴즈: 학습한 내용을 테스트하고 틀린 단어를 복습하세요.',
+            howToUseStep3: '어휘 목록: 검색과 필터를 통해 원하는 단어를 찾고 즐겨찾기 하세요.',
         },
         ja: {
             appTitle: '韓国語単語学習アプリ',
@@ -66,6 +74,10 @@ document.addEventListener('DOMContentLoaded', () => {
             allCategories: 'すべてのカテゴリ',
             showFavorites: 'お気に入りを表示',
             quizScore: (score, total) => `クイズ完了！スコア: ${score}/${total}`,
+            howToUseTitle: '使い方',
+            howToUseStep1: 'フラッシュカード: カードをクリックすると意味が表示されます。前/次ボタンで移動します。',
+            howToUseStep2: 'クイズ: 学習内容をテストし、最後に間違えた単語を復習できます。',
+            howToUseStep3: '語彙リスト: 検索やフィルターを使って単語を探し、お気に入りに追加できます。',
         },
         zh: {
             appTitle: '韩语词汇学习应用',
@@ -80,6 +92,10 @@ document.addEventListener('DOMContentLoaded', () => {
             allCategories: '所有类别',
             showFavorites: '显示收藏',
             quizScore: (score, total) => `测验完成！你的分数: ${score}/${total}`,
+            howToUseTitle: '使用方法',
+            howToUseStep1: '抽认卡：点击卡片查看含义。使用上一个/下一个按钮进行切换。',
+            howToUseStep2: '测验：测试你的知识。结束后可以复习错题。',
+            howToUseStep3: '词汇表：通过搜索和过滤查找单词并收藏。',
         },
         es: {
             appTitle: 'App de Vocabulario Coreano',
@@ -94,6 +110,10 @@ document.addEventListener('DOMContentLoaded', () => {
             allCategories: 'Todas las categorías',
             showFavorites: 'Mostrar Favoritos',
             quizScore: (score, total) => `¡Prueba completada! Tu puntuación: ${score}/${total}`,
+            howToUseTitle: 'Cómo usar',
+            howToUseStep1: 'Tarjetas: Haz clic en la tarjeta para ver el significado. Usa Anterior/Siguiente.',
+            howToUseStep2: 'Prueba: Pon a prueba tus conocimientos. Repasa los errores al final.',
+            howToUseStep3: 'Vocabulario: Busca y filtra palabras por categoría o favoritos.',
         }
     };
 
@@ -373,6 +393,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if (e.target.classList.contains('tab-link')) {
                 switchTab(e.target.dataset.tab);
             }
+        });
+
+        document.getElementById('close-how-to-use').addEventListener('click', () => {
+            document.getElementById('how-to-use').style.display = 'none';
         });
 
         prevWordBtn.addEventListener('click', () => {
