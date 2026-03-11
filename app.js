@@ -1,7 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     // --- DATA ---
-    const vocabulary = [
+    const vocabulary = window.vocabularyData || [
         { id: 1, category: 'greetings', korean: '안녕하세요', romanization: 'annyeonghaseyo', en: 'Hello', ja: 'こんにちは', zh: '你好', es: 'Hola', example_ko: '안녕하세요, 만나서 반갑습니다.', example_en: 'Hello, nice to meet you.', example_ja: 'こんにちは、初めまして。', example_zh: '你好，很高兴见到你。', example_es: 'Hola, encantado de conocerte.' },
         { id: 2, category: 'basics', korean: '네', romanization: 'ne', en: 'Yes', ja: 'はい', zh: '是的', es: 'Sí', example_ko: '네, 맞아요.', example_en: 'Yes, that\'s right.', example_ja: 'はい、そうです。', example_zh: '是的，没错。', example_es: 'Sí, eso es correcto.' },
         { id: 3, category: 'basics', korean: '아니요', romanization: 'aniyo', en: 'No', ja: 'いいえ', zh: '不是', es: 'No', example_ko: '아니요, 괜찮습니다.', example_en: 'No, thank you.', example_ja: 'いいえ、結構です。', example_zh: '不，谢谢。', example_es: 'No, gracias.' },
@@ -101,6 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let state = {
         currentWordIndex: 0,
         language: 'en',
+        theme: 'light',
         activeTab: 'flashcards',
         favorites: [],
         wrongAnswers: [],
@@ -115,9 +116,25 @@ document.addEventListener('DOMContentLoaded', () => {
         if (savedState) {
             state = { ...state, ...JSON.parse(savedState) };
         }
+        applyTheme();
+    };
+
+    const applyTheme = () => {
+        document.body.classList.toggle('dark-mode', state.theme === 'dark');
+        const themeToggle = document.getElementById('theme-toggle');
+        if (themeToggle) {
+            themeToggle.textContent = state.theme === 'dark' ? '☀️' : '🌓';
+        }
+    };
+
+    const toggleTheme = () => {
+        state.theme = state.theme === 'dark' ? 'light' : 'dark';
+        applyTheme();
+        saveState();
     };
 
     // --- DOM ELEMENTS ---
+    const themeToggleBtn = document.getElementById('theme-toggle');
     const languageSelector = document.getElementById('language-selector');
     const tabNav = document.getElementById('tab-nav');
     const tabs = document.querySelectorAll('.tab-content');
@@ -349,6 +366,7 @@ document.addEventListener('DOMContentLoaded', () => {
         switchTab(state.activeTab);
 
         // Event Listeners
+        themeToggleBtn.addEventListener('click', toggleTheme);
         languageSelector.addEventListener('change', (e) => changeLanguage(e.target.value));
         
         tabNav.addEventListener('click', (e) => {
