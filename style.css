@@ -405,6 +405,18 @@ main {
     background-color: #3a80d2;
 }
 
+/* Comments Section Styles */
+.comments-section {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: var(--card-background);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px var(--shadow-color);
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box;
+}
+
 /* Vocabulary List Styles */
 .filters {
     display: flex;

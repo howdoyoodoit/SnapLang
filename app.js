@@ -472,7 +472,17 @@ document.addEventListener('DOMContentLoaded', () => {
             if(e.target.classList.contains('favorite-btn')) {
                 toggleFavorite(parseInt(e.target.dataset.wordId));
             }
-        })
+        });
+
+        // Disqus Initialization
+        initDisqus();
+    };
+
+    const initDisqus = () => {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://snaplang-1.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
     };
 
     init();
