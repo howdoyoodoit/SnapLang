@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Korean Vocabulary App</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .privacy-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+        h1 { color: var(--primary-color); }
+        h2 { margin-top: 30px; color: var(--text-color); }
+        ul { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Privacy Policy</h1>
+        <div class="header-right">
+            <a href="index.html" style="text-decoration: none; font-weight: bold; color: var(--primary-color);">Back to App</a>
+        </div>
+    </header>
+
+    <main class="privacy-container">
+        <p>Last updated: March 11, 2026</p>
+
+        <h2>1. Introduction</h2>
+        <p>Welcome to Korean Vocabulary App ("we," "our," or "us"). We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and share your personal information when you visit or use our website.</p>
+
+        <h2>2. Information We Collect</h2>
+        <p>We do not require user registration to use the basic features of our app. However, we may collect the following types of information:</p>
+        <ul>
+            <li><strong>Log Data:</strong> Like many site operators, we collect information that your browser sends whenever you visit our Site ("Log Data").</li>
+            <li><strong>Cookies:</strong> We use cookies to store your preferences (such as language settings, dark mode, and favorites). You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent.</li>
+        </ul>
+
+        <h2>3. Google AdSense & DoubleClick Cookie</h2>
+        <p>Google, as a third-party vendor, uses cookies to serve ads on our site.</p>
+        <ul>
+            <li>Google's use of the DoubleClick cookie enables it and its partners to serve ads to our users based on their visit to our site or other sites on the Internet.</li>
+            <li>Users may opt out of the use of the DoubleClick cookie for interest-based advertising by visiting the <a href="https://adssettings.google.com/" target="_blank" rel="nofollow">Google Ads Settings</a>.</li>
+        </ul>
+
+        <h2>4. Disqus Comments</h2>
+        <p>We use Disqus to allow users to leave comments. Disqus may collect information about your visit to our site. For more information, please refer to the <a href="https://help.disqus.com/terms-and-policies/disqus-privacy-policy" target="_blank" rel="nofollow">Disqus Privacy Policy</a>.</p>
+
+        <h2>5. Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy, please contact us via the Partnership form on our homepage.</p>
+    </main>
+
+    <script>
+        // Apply theme based on local storage
+        const savedState = localStorage.getItem('koreanApp.state');
+        if (savedState) {
+            const state = JSON.parse(savedState);
+            document.body.classList.toggle('dark-mode', state.theme === 'dark');
+        }
+    </script>
+</body>
+</html>
