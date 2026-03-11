@@ -25,6 +25,7 @@
         <button class="tab-link active" data-tab="flashcards" data-i18n="tabFlashcards">Flashcards</button>
         <button class="tab-link" data-tab="quiz" data-i18n="tabQuiz">Quiz</button>
         <button class="tab-link" data-tab="vocabulary" data-i18n="tabVocabulary">Vocabulary</button>
+        <button class="tab-link" data-tab="partnership" data-i18n="tabPartnership">Partnership</button>
     </nav>
 
     <main id="app-container">
@@ -65,6 +66,28 @@
                 <button id="favorites-filter" data-i18n="showFavorites">Show Favorites</button>
             </div>
             <div id="vocabulary-list"></div>
+        </section>
+
+        <!-- Partnership Section -->
+        <section id="partnership" class="tab-content">
+            <div class="contact-form-container">
+                <h2 data-i18n="partnershipTitle">Partnership Inquiry</h2>
+                <form action="https://formspree.io/f/mnjgddrr" method="POST" id="contact-form">
+                    <div class="form-group">
+                        <label for="name" data-i18n="formName">Name</label>
+                        <input type="text" name="name" id="name" required data-i18n-placeholder="namePlaceholder">
+                    </div>
+                    <div class="form-group">
+                        <label for="email" data-i18n="formEmail">Email</label>
+                        <input type="email" name="email" id="email" required data-i18n-placeholder="emailPlaceholder">
+                    </div>
+                    <div class="form-group">
+                        <label for="message" data-i18n="formMessage">Message</label>
+                        <textarea name="message" id="message" rows="5" required data-i18n-placeholder="messagePlaceholder"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn" data-i18n="formSubmit">Send Message</button>
+                </form>
+            </div>
         </section>
     </main>
 
