@@ -54,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
             introTitle: 'Master Essential Korean Words',
             introText: 'Welcome to the ultimate free resource for learning Korean vocabulary. Our app is designed to help you memorize essential words through interactive flashcards and quizzes. Whether you are a complete beginner or looking to refresh your memory, our scientifically designed repetition system ensures you retain what you learn.',
             footerSejong: 'Who is King Sejong?',
+            tabSejong: 'King Sejong',
         },
         ko: {
             appTitle: '한국어 단어 학습 앱',
