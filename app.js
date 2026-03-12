@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
             introTitle: '必須の韓国語単語をマスターする',
             introText: '韓国語の語彙を学ぶための究極の無料リソースへようこそ。インタラクティブなフラッシュカードとクイズを通じて、必須単語を記憶できるように設計されています。初心者の方も、復習したい方も、科学的に設計された反復システムにより、学習した内容を確実に定着させます。',
             footerSejong: '世宗大王とは？',
-
+            tabSejong: '世宗大王',
         },
         zh: {
             appTitle: '韩语词汇学习应用',
@@ -147,6 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
             introTitle: '掌握基本韩语单词',
             introText: '欢迎使用终极免费韩语词汇学习资源。我们的应用程序旨在通过互动抽认卡和测验帮助您记忆基本单词。无论您是完全的初学者还是想复习记忆，我们科学设计的重复系统都能确保您记住学到的内容。',
             footerSejong: '谁是世宗大王？',
+            tabSejong: '世宗大王',
         },
         es: {
             appTitle: 'App de Vocabulario Coreano',
@@ -177,6 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
             introTitle: 'Domina las palabras esenciales en coreano',
             introText: 'Bienvenido al mejor recurso gratuito para aprender vocabulario coreano. Nuestra aplicación está diseñada para ayudarte a memorizar palabras esenciales mediante tarjetas interactivas y cuestionarios. Ya seas un principiante absoluto o busques refrescar tu memoria, nuestro sistema de repetición diseñado científicamente asegura que retengas lo que aprendes.',
             footerSejong: '¿Quién es el Rey Sejong?',
+            tabSejong: 'Rey Sejong',
         }
     };
 
