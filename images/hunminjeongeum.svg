@@ -1,7 +1,29 @@
 <svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="400" fill="#F3E5AB"/>
-  <rect x="100" y="50" width="600" height="300" fill="white" stroke="#5C3D1E" stroke-width="4"/>
-  <text x="400" y="150" font-family="serif" font-size="60" text-anchor="middle" fill="#333">훈민정음</text>
-  <text x="400" y="250" font-family="serif" font-size="30" text-anchor="middle" fill="#666">ㄱ ㄴ ㄷ ㄹ ㅁ ㅂ ㅅ ㅇ</text>
-  <text x="400" y="300" font-family="serif" font-size="30" text-anchor="middle" fill="#666">ㅏ ㅑ ㅓ ㅕ ㅗ ㅛ ㅜ ㅠ ㅡ ㅣ</text>
+  <defs>
+    <filter id="paperTexture">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="5" result="noise" />
+      <feDiffuseLighting in="noise" lighting-color="#F3E5AB" surfaceScale="2">
+        <feDistantLight azimuth="45" elevation="60" />
+      </feDiffuseLighting>
+    </filter>
+  </defs>
+  <!-- Paper Background -->
+  <rect width="800" height="400" fill="#F3E5AB" filter="url(#paperTexture)"/>
+  <rect x="100" y="40" width="600" height="320" fill="none" stroke="#5C3D1E" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- Content -->
+  <text x="400" y="140" font-family="serif" font-size="55" text-anchor="middle" fill="#222" font-weight="bold">訓民正音</text>
+  <text x="400" y="220" font-family="serif" font-size="35" text-anchor="middle" fill="#333" font-weight="bold">훈민정음</text>
+  
+  <!-- Vowels and Consonants -->
+  <g font-family="serif" font-size="28" fill="#444" text-anchor="middle">
+    <text x="400" y="280">ㄱ ㄴ ㄷ ㄹ ㅁ ㅂ ㅅ ㅇ ㅈ ㅊ ㅋ ㅌ ㅍ ㅎ</text>
+    <text x="400" y="330">ㅏ ㅑ ㅓ ㅕ ㅗ ㅛ ㅜ ㅠ ㅡ ㅣ</text>
+  </g>
+  
+  <!-- Vertical lines for old book feel -->
+  <line x1="250" y1="50" x2="250" y2="350" stroke="#5C3D1E" stroke-width="1" opacity="0.3"/>
+  <line x1="550" y1="50" x2="550" y2="350" stroke="#5C3D1E" stroke-width="1" opacity="0.3"/>
+
+  <text x="400" y="385" font-family="serif" font-size="18" text-anchor="middle" fill="#5C3D1E" font-weight="bold">훈민정음 (Hunminjeongeum)</text>
 </svg>

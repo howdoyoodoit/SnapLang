@@ -1,9 +1,28 @@
 <svg width="400" height="500" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
-  <rect width="400" height="500" fill="#eee"/>
-  <rect x="150" y="100" width="100" height="300" fill="#555" rx="5"/>
-  <rect x="130" y="380" width="140" height="40" fill="#888" rx="2"/>
-  <path d="M150 150 L250 150" stroke="white" stroke-width="2"/>
-  <path d="M150 200 L250 200" stroke="white" stroke-width="2"/>
-  <path d="M150 250 L250 250" stroke="white" stroke-width="2"/>
-  <text x="200" y="460" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">Cheugugi (Rain Gauge)</text>
+  <defs>
+    <linearGradient id="ironGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#708090;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2F4F4F;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="stoneGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#D3D3D3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#808080;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="400" height="500" fill="#f5f5f5"/>
+  
+  <!-- Stone Base -->
+  <rect x="130" y="320" width="140" height="100" fill="url(#stoneGrad)" stroke="#696969" stroke-width="2"/>
+  <rect x="120" y="420" width="160" height="20" fill="#808080" rx="2"/>
+  <path d="M140 330 L260 330 M140 350 L260 350 M140 370 L260 370" stroke="#696969" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Cylinder Stand -->
+  <rect x="160" y="280" width="80" height="40" fill="url(#stoneGrad)" stroke="#696969" stroke-width="1"/>
+  
+  <!-- Rain Gauge Cylinder -->
+  <rect x="175" y="80" width="50" height="200" fill="url(#ironGrad)" stroke="#1C1C1C" stroke-width="2"/>
+  <path d="M175 100 L225 100 M175 120 L225 120 M175 140 L225 140 M175 160 L225 160 M175 180 L225 180 M175 200 L225 200 M175 220 L225 220 M175 240 L225 240 M175 260 L225 260" stroke="#FFF" stroke-width="1" opacity="0.2"/> <!-- Ruler marks -->
+  
+  <text x="200" y="480" font-family="serif" font-size="18" text-anchor="middle" fill="#333" font-weight="bold">측우기 (Rain Gauge)</text>
 </svg>

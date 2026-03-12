@@ -1,13 +1,44 @@
 <svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#4A90E2;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#f8f1e5;stop-opacity:1" />
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#DAA520;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B8860B;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="throneGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#CD7F32;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B4513;stop-opacity:1" />
     </linearGradient>
   </defs>
-  <rect width="800" height="400" fill="url(#skyGrad)"/>
-  <rect x="250" y="300" width="300" height="60" fill="#8B572A" rx="5"/>
-  <path d="M400 80 L340 140 L340 300 L460 300 L460 140 Z" fill="#D4890D" stroke="#A66D0A" stroke-width="2"/>
-  <circle cx="400" cy="130" r="25" fill="#F5A623"/>
-  <text x="400" y="390" font-family="Arial" font-size="14" text-anchor="middle" fill="#5C3D1E">Stylized Statue of King Sejong the Great</text>
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f0f0f0"/>
+  
+  <!-- Pedestal -->
+  <rect x="200" y="320" width="400" height="60" fill="#A9A9A9"/>
+  <rect x="220" y="310" width="360" height="10" fill="#808080"/>
+
+  <!-- Throne (Chair) -->
+  <rect x="300" y="200" width="200" height="120" fill="url(#throneGrad)"/>
+  <path d="M300 200 L280 150 L320 150 Z" fill="#8B4513"/>
+  <path d="M500 200 L520 150 L480 150 Z" fill="#8B4513"/>
+  
+  <!-- Body & Robe -->
+  <path d="M340 320 L460 320 L450 140 Q400 120 350 140 Z" fill="url(#goldGrad)"/>
+  <path d="M350 160 L320 250 L350 280 Z" fill="url(#goldGrad)" stroke="#B8860B" stroke-width="1"/>
+  <path d="M450 160 L480 250 L450 280 Z" fill="url(#goldGrad)" stroke="#B8860B" stroke-width="1"/>
+  
+  <!-- Book (Hunminjeongeum) -->
+  <rect x="375" y="180" width="50" height="35" fill="#FFF8DC" transform="rotate(-5, 400, 197)" stroke="#DAA520"/>
+  <line x1="385" y1="185" x2="415" y2="182" stroke="#333" stroke-width="1"/>
+  <line x1="386" y1="195" x2="416" y2="192" stroke="#333" stroke-width="1"/>
+  
+  <!-- Head & Hat (Ikseongwan) -->
+  <circle cx="400" cy="115" r="22" fill="#FFE4B5"/>
+  <path d="M380 105 Q400 80 420 105 L425 120 L375 120 Z" fill="#333"/>
+  <path d="M390 85 L410 85 L415 75 L385 75 Z" fill="#333"/>
+  
+  <!-- Beard -->
+  <path d="M385 130 Q400 150 415 130" fill="none" stroke="#333" stroke-width="2"/>
+  
+  <text x="400" y="30" font-family="serif" font-size="20" text-anchor="middle" fill="#333" font-weight="bold">세종대왕 동상 (Statue of King Sejong)</text>
 </svg>

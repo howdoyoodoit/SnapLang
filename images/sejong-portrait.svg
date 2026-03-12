@@ -1,7 +1,35 @@
 <svg width="400" height="500" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
-  <rect width="400" height="500" fill="#B22222"/>
-  <circle cx="200" cy="180" r="100" fill="#F5A623"/>
-  <path d="M150 120 L250 120 L270 180 L130 180 Z" fill="#333"/>
-  <path d="M100 300 Q200 250 300 300 L320 500 L80 500 Z" fill="#D4890D"/>
-  <text x="200" y="480" font-family="Arial" font-size="16" text-anchor="middle" fill="white">King Sejong Portrait</text>
+  <defs>
+    <linearGradient id="robeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#B22222;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#800000;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="400" height="500" fill="#fdf5e6"/>
+  
+  <!-- Shoulders & Body -->
+  <path d="M50 500 Q50 250 200 250 Q350 250 350 500 Z" fill="url(#robeGrad)"/>
+  <circle cx="200" cy="350" r="40" fill="#FFD700" opacity="0.6"/> <!-- Dragon Emblem -->
+  <path d="M200 330 Q215 350 200 370 Q185 350 200 330" fill="none" stroke="#B8860B" stroke-width="2"/>
+  
+  <!-- Head & Face -->
+  <path d="M150 180 Q200 130 250 180 Q250 250 200 280 Q150 250 150 180 Z" fill="#FFE4B5"/>
+  <circle cx="180" cy="190" r="2" fill="#333"/> <!-- Eyes -->
+  <circle cx="220" cy="190" r="2" fill="#333"/>
+  <path d="M190 210 Q200 220 210 210" fill="none" stroke="#CD853F" stroke-width="1"/> <!-- Nose -->
+  <path d="M185 235 Q200 245 215 235" fill="none" stroke="#A52A2A" stroke-width="2"/> <!-- Lips -->
+
+  <!-- Hat (Ikseongwan) -->
+  <path d="M155 170 Q200 110 245 170 Z" fill="#222"/>
+  <rect x="180" y="110" width="40" height="20" fill="#222" rx="2"/>
+  <path d="M180 110 L160 100 L160 130 Z" fill="#222"/> <!-- Hat Wings -->
+  <path d="M220 110 L240 100 L240 130 Z" fill="#222"/>
+
+  <!-- Beard -->
+  <path d="M170 240 Q200 300 230 240" fill="none" stroke="#222" stroke-width="1.5" opacity="0.8"/>
+  <path d="M160 215 Q175 225 190 220" fill="none" stroke="#222" stroke-width="1"/> <!-- Mustache left -->
+  <path d="M210 220 Q225 225 240 215" fill="none" stroke="#222" stroke-width="1"/> <!-- Mustache right -->
+
+  <text x="200" y="470" font-family="serif" font-size="18" text-anchor="middle" fill="#333" font-weight="bold">세종대왕 어진 (Portrait)</text>
 </svg>
