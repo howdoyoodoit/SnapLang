@@ -1,0 +1,7 @@
+<svg width="400" height="500" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="500" fill="#B22222"/>
+  <circle cx="200" cy="180" r="100" fill="#F5A623"/>
+  <path d="M150 120 L250 120 L270 180 L130 180 Z" fill="#333"/>
+  <path d="M100 300 Q200 250 300 300 L320 500 L80 500 Z" fill="#D4890D"/>
+  <text x="200" y="480" font-family="Arial" font-size="16" text-anchor="middle" fill="white">King Sejong Portrait</text>
+</svg>
