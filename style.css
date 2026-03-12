@@ -47,21 +47,32 @@ header {
 }
 
 .sejong-highlight-btn {
-    background-color: var(--secondary-color);
+    background: linear-gradient(135deg, #f5a623 0%, #d4890d 100%);
     color: white;
-    padding: 8px 15px;
+    padding: 8px 18px;
     border-radius: 20px;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     font-weight: 700;
-    box-shadow: 0 2px 5px var(--shadow-color);
-    transition: transform 0.2s, background-color 0.2s;
+    box-shadow: 0 4px 10px rgba(212, 137, 13, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
     white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    animation: sejong-pulse 2s infinite;
 }
 
 .sejong-highlight-btn:hover {
-    transform: scale(1.05);
-    background-color: #e69516;
+    transform: scale(1.08) translateY(-2px);
+    box-shadow: 0 6px 15px rgba(212, 137, 13, 0.4);
+    background: linear-gradient(135deg, #ffb037 0%, #e69516 100%);
+}
+
+@keyframes sejong-pulse {
+    0% { box-shadow: 0 0 0 0 rgba(245, 166, 35, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(245, 166, 35, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(245, 166, 35, 0); }
 }
 
 .header-right {
