@@ -85,7 +85,7 @@ h1 {
     margin-bottom: 20px;
 }
 
-.tab-link {
+.tab-link, .tab-link-external {
     padding: 10px 20px;
     font-size: 1rem;
     font-weight: 700;
@@ -95,6 +95,13 @@ h1 {
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.tab-link:hover, .tab-link-external:hover {
+    background-color: rgba(74, 144, 226, 0.1);
+    color: var(--primary-color);
 }
 
 .tab-link.active {

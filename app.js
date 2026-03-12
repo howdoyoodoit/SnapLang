@@ -84,6 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
             introTitle: '필수 한국어 단어 마스터하기',
             introText: '한국어 어휘 학습을 위한 최고의 무료 리소스에 오신 것을 환영합니다. 대화형 플래시카드와 퀴즈를 통해 필수 단어를 암기할 수 있도록 설계되었습니다. 초보자이든 복습을 원하는 학습자이든, 과학적으로 설계된 반복 시스템이 학습 내용을 확실히 기억하도록 돕습니다.',
             footerSejong: '세종대왕은 누구인가요?',
+            tabSejong: '세종대왕',
         },
         ja: {
             appTitle: '韓国語単語学習アプリ',
