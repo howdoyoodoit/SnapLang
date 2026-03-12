@@ -108,6 +108,28 @@ main {
     max-width: 800px;
 }
 
+.intro-content {
+    background-color: var(--card-background);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px var(--shadow-color);
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.intro-content h2 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+.intro-content p {
+    color: var(--text-color);
+    margin-bottom: 0;
+}
+
 .info-section {
     background-color: var(--card-background);
     border: 1px solid var(--border-color);
@@ -456,6 +478,8 @@ main {
     box-shadow: 0 2px 8px var(--shadow-color);
     display: flex;
     flex-direction: column;
+    position: relative;
+    padding-right: 45px;
 }
 
 .vocab-item .korean-word {
@@ -474,65 +498,20 @@ main {
     color: var(--primary-color);
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
-    body {
-        padding: 10px;
-    }
-
-    h1 {
-        font-size: 1.5rem;
-    }
-
-    #tab-nav {
-        gap: 5px;
-        justify-content: center;
-				flex-wrap: wrap;
-    }
-
-    .tab-link {
-        padding: 8px 12px;
-        font-size: 0.9rem;
-    }
-
-    #flashcard-container {
-        height: 300px;
-    }
-
-    .korean-word {
-        font-size: 2.5rem;
-    }
-
-    .romanization {
-        font-size: 1.2rem;
-    }
-
-    .filters {
-        flex-direction: column;
-    }
+.vocab-item .favorite-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--light-text-color);
+    padding: 0;
 }
 
-/* Intro Content Styles */
-.intro-content {
-    background-color: var(--card-background);
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px var(--shadow-color);
-    margin-bottom: 30px;
-    width: 100%;
-    max-width: 800px;
-    text-align: center;
-    line-height: 1.6;
-}
-
-.intro-content h2 {
-    color: var(--primary-color);
-    margin-top: 0;
-}
-
-.intro-content p {
-    color: var(--text-color);
-    margin-bottom: 0;
+.vocab-item .favorite-btn.favorited {
+    color: var(--secondary-color);
 }
 
 /* Footer Styles */
@@ -547,4 +526,147 @@ footer {
 
 footer p {
     margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        margin: 0;
+    }
+
+    .header-right {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .intro-content {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .intro-content h2 {
+        font-size: 1.3rem;
+    }
+
+    .intro-content p {
+        font-size: 0.9rem;
+    }
+
+    .info-section {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .info-section h2 {
+        font-size: 1.1rem;
+    }
+
+    .info-section ul {
+        font-size: 0.85rem;
+    }
+
+    #tab-nav {
+        width: 100%;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-bottom: 8px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    #tab-nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .tab-link {
+        flex: 0 0 auto;
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    .card-actions {
+        top: 10px;
+        right: 10px;
+    }
+
+    .pronounce-btn, .favorite-btn {
+        font-size: 1.2rem;
+    }
+
+    #flashcard-container {
+        height: 300px;
+    }
+
+    .korean-word {
+        font-size: 2.8rem;
+    }
+
+    .romanization {
+        font-size: 1.2rem;
+    }
+
+    .meaning {
+        font-size: 1.8rem;
+    }
+
+    #quiz-container {
+        padding: 20px;
+    }
+
+    #quiz-container .options {
+        grid-template-columns: 1fr;
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+
+    #vocabulary-list {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form-container {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .korean-word {
+        font-size: 2.2rem;
+    }
+
+    .example-sentence-korean, .example-sentence-translation {
+        font-size: 1rem;
+    }
+
+    .flashcard-nav button {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+
+    footer {
+        margin-top: 30px;
+    }
+
+    .comments-section {
+        padding: 15px;
+        margin-top: 25px;
+    }
 }
