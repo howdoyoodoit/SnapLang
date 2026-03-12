@@ -40,6 +40,30 @@ header {
     margin-bottom: 20px;
 }
 
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.sejong-highlight-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 700;
+    box-shadow: 0 2px 5px var(--shadow-color);
+    transition: transform 0.2s, background-color 0.2s;
+    white-space: nowrap;
+}
+
+.sejong-highlight-btn:hover {
+    transform: scale(1.05);
+    background-color: #e69516;
+}
+
 .header-right {
     display: flex;
     gap: 10px;

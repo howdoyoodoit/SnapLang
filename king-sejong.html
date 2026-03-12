@@ -1,17 +1,17 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn about King Sejong the Great, the 4th King of the Joseon Dynasty and the creator of the Korean writing system, Hangul.">
-    <title>King Sejong the Great - Korean Vocabulary App</title>
+    <title>King Sejong the Great - The Creator of Hangul</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        .content-container {
-            max-width: 800px;
+        .sejong-page {
+            max-width: 900px;
             margin: 0 auto;
             padding: 40px 20px;
             line-height: 1.8;
@@ -19,165 +19,127 @@
         }
         .hero-section {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
         .hero-section h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 10px;
-            color: var(--primary-color);
         }
         .hero-section p {
             font-size: 1.2rem;
             color: var(--light-text-color);
-            font-style: italic;
-        }
-        h2 {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 10px;
-            margin-top: 40px;
-        }
-        p {
-            margin-bottom: 20px;
-        }
-        .highlight-box {
-            background-color: var(--card-background);
-            border-left: 5px solid var(--secondary-color);
-            padding: 20px;
-            margin: 30px 0;
-            border-radius: 0 10px 10px 0;
-            box-shadow: 0 4px 15px var(--shadow-color);
-        }
-        .back-link {
-            display: inline-block;
-            margin-top: 30px;
-            text-decoration: none;
-            color: var(--primary-color);
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-        .back-link:hover {
-            color: var(--secondary-color);
         }
         .image-container {
             width: 100%;
-            margin-bottom: 30px;
+            margin: 30px 0;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 4px 15px var(--shadow-color);
+            box-shadow: 0 10px 30px var(--shadow-color);
+            background-color: #eee;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .image-container img {
             width: 100%;
             height: auto;
             display: block;
         }
-        .image-caption {
+        .content-section {
             background-color: var(--card-background);
-            padding: 10px;
-            font-size: 0.9rem;
-            color: var(--light-text-color);
-            text-align: center;
-            border-top: 1px solid var(--border-color);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px var(--shadow-color);
+            margin-bottom: 40px;
         }
-        .flex-row {
-            display: flex;
-            gap: 20px;
-            align-items: flex-start;
+        .content-section h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+        .back-home {
+            display: inline-block;
             margin-bottom: 30px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 700;
         }
-        .flex-row > div {
-            flex: 1;
+        .back-home:before {
+            content: "← ";
         }
-        @media (max-width: 600px) {
-            .hero-section h1 { font-size: 1.8rem; }
-            .flex-row { flex-direction: column; }
+        @media (max-width: 768px) {
+            .grid-layout {
+                grid-template-columns: 1fr;
+            }
+            .hero-section h1 {
+                font-size: 2.2rem;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1 style="font-size: 1.5rem;">Korean Vocabulary App</h1>
-        <div class="header-right">
-            <a href="index.html" class="back-link" style="margin-top: 0;">Back to App</a>
-        </div>
-    </header>
+    <div class="sejong-page">
+        <a href="index.html" class="back-home">Back to Vocabulary App</a>
 
-    <main class="content-container">
-        <section class="hero-section">
-            <div class="image-container">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/King_Sejong_the_Great_Statue_in_Gwanghwamun_Square.jpg/1024px-King_Sejong_the_Great_Statue_in_Gwanghwamun_Square.jpg" alt="Statue of King Sejong the Great in Gwanghwamun Square, Seoul">
-                <div class="image-caption">The iconic statue of King Sejong the Great in Gwanghwamun Square, Seoul.</div>
-            </div>
+        <div class="hero-section">
             <h1>King Sejong the Great</h1>
-            <p>The Sage King who gave Korea its voice.</p>
-        </section>
-
-        <section>
-            <h2>Who was King Sejong?</h2>
-            <div class="flex-row">
-                <div>
-                    <p>King Sejong the Great (1397–1450) was the fourth monarch of the Joseon Dynasty of Korea. He is widely considered one of the greatest leaders in Korean history, known for his deep commitment to the welfare of his people and his immense contributions to science, technology, and culture.</p>
-                    <p>His reign is often referred to as the "Golden Age" of Korean history, a period of unprecedented scientific and cultural flowering.</p>
-                </div>
-                <div class="image-container" style="max-width: 300px;">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Standard_portrait_of_King_Sejong.jpg/439px-Standard_portrait_of_King_Sejong.jpg" alt="Standard portrait of King Sejong">
-                    <div class="image-caption">Standard portrait of King Sejong.</div>
-                </div>
-            </div>
-            
-            <div class="highlight-box">
-                "The language of our people is different from that of the Chinese and does not match the Chinese characters. Therefore, even if the ignorant people want to communicate, many of them in the end cannot state their concerns." — King Sejong
-            </div>
-        </section>
-
-        <section>
-            <h2>The Creation of Hangul</h2>
-            <p>Before the 15th century, Koreans wrote using Classical Chinese characters (Hanja). However, Hanja was extremely difficult to learn, meaning that only the elite upper class was literate. King Sejong felt deep sympathy for the common people who could not read or write.</p>
-            
+            <p>The 4th King of the Joseon Dynasty and the Creator of Hangul</p>
             <div class="image-container">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Hunmin_jeong-eum.jpg/1024px-Hunmin_jeong-eum.jpg" alt="The Hunminjeongeum manuscript">
-                <div class="image-caption">A page from the Hunminjeongeum, the document that introduced Hangul in 1446.</div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/King_Sejong_the_Great_Statue_in_Gwanghwamun_Square.jpg/800px-King_Sejong_the_Great_Statue_in_Gwanghwamun_Square.jpg" alt="Statue of King Sejong in Gwanghwamun Square">
             </div>
+        </div>
 
-            <p>In 1443, he personally led the creation of <strong>Hangul</strong>, a phonetic writing system designed specifically for the Korean language. Unlike Hanja, which is logographic, Hangul is an alphabetic system where the shapes of the consonants are based on the shape of the mouth and tongue when pronouncing them.</p>
+        <section class="content-section">
+            <div class="grid-layout">
+                <div>
+                    <h2>Who was King Sejong?</h2>
+                    <p>King Sejong (1397–1450) is one of the most beloved and respected figures in Korean history. He reigned from 1418 until his death. His rule is often called the "Golden Age of Korean Culture" because of his immense contributions to science, technology, literature, and most importantly, the creation of the Korean alphabet, <strong>Hangul</strong>.</p>
+                </div>
+                <div class="image-container">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Standard_portrait_of_King_Sejong.jpg/439px-Standard_portrait_of_King_Sejong.jpg" alt="Portrait of King Sejong">
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>Scientific and Cultural Legacy</h2>
-            <p>Beyond Hangul, King Sejong's reign saw incredible advancements in science and technology. He supported the work of Jang Yeong-sil, a brilliant scientist born into a low social class.</p>
-            
-            <div class="flex-row">
+        <section class="content-section">
+            <h2>The Creation of Hangul (1443)</h2>
+            <p>Before Hangul was created, Koreans used Chinese characters (Hanja) for writing. However, Chinese characters were very difficult to learn, meaning only the wealthy and elite could read and write. Most of the common people were illiterate.</p>
+            <p>King Sejong felt deep compassion for his people and wanted everyone to be able to express their thoughts and feelings in writing. Despite strong opposition from noble scholars, he independently developed a scientific and easy-to-learn phonetic alphabet.</p>
+            <div class="image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Hunmin_jeong-eum.jpg/800px-Hunmin_jeong-eum.jpg" alt="The Hunminjeongeum manuscript">
+            </div>
+            <p>Hangul was originally called <em>Hunminjeongeum</em>, which means "Proper sounds to instruct the people." It consists of 24 basic letters (14 consonants and 10 vowels) designed to represent the shape of the vocal organs during speech.</p>
+        </section>
+
+        <section class="content-section">
+            <div class="grid-layout">
                 <div class="image-container">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/JangYeongSil.jpg/800px-JangYeongSil.jpg" alt="Statue of a rain gauge from Sejong's era" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cheugugi.jpg/600px-Cheugugi.jpg'">
-                    <div class="image-caption">The Cheugugi, the world's first standardized rain gauge.</div>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cheugugi.jpg/600px-Cheugugi.jpg" alt="Cheugugi - The first rain gauge">
                 </div>
                 <div>
+                    <h2>Scientific Achievements</h2>
+                    <p>King Sejong was also a great scientist and inventor. Along with the famous scientist <strong>Jang Yeong-sil</strong>, he developed many revolutionary tools:</p>
                     <ul>
-                        <li><strong>Astronomy:</strong> He commissioned the creation of celestial globes and water clocks.</li>
-                        <li><strong>Agriculture:</strong> He published <em>Nongsa Jikseol</em>, a book on farming techniques tailored to Korea's climate.</li>
-                        <li><strong>Medicine:</strong> He oversaw the compilation of an 85-volume encyclopedia of traditional Korean medicine.</li>
+                        <li><strong>Cheugugi:</strong> The world's first standardized rain gauge to help farmers.</li>
+                        <li><strong>Honcheonui:</strong> A celestial globe to study astronomy.</li>
+                        <li><strong>Angbuilgu:</strong> A sundial to help people tell time.</li>
+                        <li>Improvements in moveable type printing and musical notation.</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <section>
-            <p>Today, King Sejong is honored on the 10,000 KRW banknote, and his birthday is a major inspiration for Hangeul Day, celebrated on October 9th in South Korea.</p>
-            <a href="index.html" class="back-link">← Back to learning Korean Vocabulary</a>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Korean Vocabulary App. All rights reserved.</p>
-    </footer>
-
-    <script>
-        // Apply theme based on local storage
-        const savedState = localStorage.getItem('koreanApp.state');
-        if (savedState) {
-            const state = JSON.parse(savedState);
-            document.body.classList.toggle('dark-mode', state.theme === 'dark');
-        }
-    </script>
+        <footer style="text-align: center; margin-top: 50px; color: var(--light-text-color);">
+            <p>&copy; 2026 Korean Vocabulary App. Dedicated to King Sejong's Legacy.</p>
+        </footer>
+    </div>
 </body>
 </html>
